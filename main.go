@@ -13,7 +13,6 @@ func main() {
 		// 解析 GET 请求参数
 		queryParams := r.URL.Query()
 		name := queryParams.Get("name")
-
 		// 获取当前时间戳
 		timestamp := time.Now().Unix()
 		envName := os.Getenv("ENV_NAME")
@@ -30,6 +29,12 @@ func main() {
 
 	// 启动 HTTP 服务器
 	log.Println("Server listening on port 8080...")
+	go func() {
+		time.Sleep(30*time.Second)
+		for {
+			fmt.Println("CURRENT LOG ", time.Now())
+		}
+	}()
 	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Fatal("Failed to start server:", err)
