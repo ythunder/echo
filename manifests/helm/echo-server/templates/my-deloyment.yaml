@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: myapp
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: myapp
@@ -14,7 +14,7 @@ spec:
         test: c1
     spec:
       containers:
-      - image: bettylu/echo-server:latest
+      - image: {{ .Values.image }}
         name: myapp
         ports:
         - containerPort: 8080

@@ -4,8 +4,8 @@ metadata:
   name: myapp-svc
 spec:
   ports:
-  - port: 8090
+  - port: {{ .Values.service.port }}
     targetPort: 8080
-  type: NodePort
+  type: {{ .Values.service.type }}
   selector:
     app: myapp
