@@ -30,7 +30,7 @@ func main() {
 	// 启动 HTTP 服务器
 	log.Println("Server listening on port 8080...")
 	go func() {
-		time.Sleep(30*time.Second)
+		time.Sleep(15*time.Minute)
 		for {
 			log.Println("CURRENT LOG ", time.Now())
 		}
