@@ -16,5 +16,8 @@ spec:
       containers:
       - image: {{ .Values.image }}
         name: myapp
+        env:
+        - name: aliyun_logs_log-stdout
+          value: stdout
         ports:
         - containerPort: 8080

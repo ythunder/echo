@@ -32,7 +32,7 @@ func main() {
 	go func() {
 		time.Sleep(30*time.Second)
 		for {
-			fmt.Println("CURRENT LOG ", time.Now())
+			log.Println("CURRENT LOG ", time.Now())
 		}
 	}()
 	err := http.ListenAndServe(":8080", nil)
