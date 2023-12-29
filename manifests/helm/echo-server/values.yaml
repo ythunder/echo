@@ -36,6 +36,8 @@ service:
   type: ClusterIP
   port: 8080
 
+log:
+  key: echo-server-log
 ingress:
   enabled: false
   className: ""

@@ -17,7 +17,9 @@ spec:
       - image: {{ .Values.image }}
         name: myapp
         env:
-        - name: aliyun_logs_log-stdout
+        - name: aliyun_logs_{{ .Values.log.key }} # 采集方式
           value: stdout
+        - name: aliyun_logs_{{ .Values.log.key }}_tags  # 日志标识
+          value: app=echo
         ports:
         - containerPort: 8080
