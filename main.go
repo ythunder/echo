@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/echo", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		// 解析 GET 请求参数
 		queryParams := r.URL.Query()
 		name := queryParams.Get("name")
@@ -30,7 +30,6 @@ func main() {
 	// 启动 HTTP 服务器
 	log.Println("Server listening on port 8080...")
 	go func() {
-		time.Sleep(15*time.Minute)
 		for {
 			log.Println("CURRENT LOG ", time.Now())
 		}

@@ -17,9 +17,43 @@ spec:
       - image: {{ .Values.image }}
         name: myapp
         env:
-        - name: aliyun_logs_{{ .Values.log.key }} # 采集方式
+        - name: aliyun_logs_{{ .Values.log.key }}
           value: stdout
-        - name: aliyun_logs_{{ .Values.log.key }}_tags  # 日志标识
-          value: app=echo
+        - name: aliyun_logs_access-log
+          value: /user/local/echo/server*.log
+
         ports:
         - containerPort: 8080
+
+
+
+insert into t_ziyan_resource_quota values(0, 605, 2555, "ap-beijing", "cpu", 900, 0);
+insert into t_ziyan_resource_quota values(0, 605, 2555, "ap-guangzhou", "cpu", 330, 0);
+insert into t_ziyan_resource_quota values(0, 605, 2555, "ap-nanjing", "cpu", 120, 0);
+  insert into t_ziyan_resource_quota values(0, 605, 2555, "ap-shanghai", "cpu", 2620, 0);
+  insert into t_ziyan_resource_quota values(0, 605, 2555, "ap-shenzhen", "cpu", 1000, 0);
+  insert into t_ziyan_resource_quota values(0, 605, 2555, "ap-tianjin", "cpu", 3850, 0);
+  insert into t_ziyan_resource_quota values(0, 605, 2555, "ap-chongqing", "cpu", 100, 0);
+  insert into t_ziyan_resource_quota values(0, 605, 2555, "ap-beijing", "memory", 1800, 0);
+  insert into t_ziyan_resource_quota values(0, 605, 2555, "ap-guangzhou", "memory", 660, 0);
+  insert into t_ziyan_resource_quota values(0, 605, 2555, "ap-nanjing", "memory", 240, 0);
+  insert into t_ziyan_resource_quota values(0, 605, 2555, "ap-shanghai", "memory", 5340, 0);
+  insert into t_ziyan_resource_quota values(0, 605, 2555, "ap-shenzhen", "memory", 2000, 0);
+  insert into t_ziyan_resource_quota values(0, 605, 2555, "ap-tianjin", "memory", 7700, 0);
+  insert into t_ziyan_resource_quota values(0, 605, 2555, "ap-chongqing", "memory", 200, 0);
+
+
+  insert into t_ziyan_resource_quota values(0, 1451, 2014, "ap-beijing", "cpu", 130, 0);
+  insert into t_ziyan_resource_quota values(0, 1451, 2014, "ap-guangzhou", "cpu", 930, 0);
+  insert into t_ziyan_resource_quota values(0, 1451, 2014, "ap-nanjing", "cpu", 770, 0);
+  insert into t_ziyan_resource_quota values(0, 1451, 2014, "ap-shanghai", "cpu", 170, 0);
+  insert into t_ziyan_resource_quota values(0, 1451, 2014, "ap-shenzhen", "cpu", 1000, 0);
+  insert into t_ziyan_resource_quota values(0, 1451, 2014, "ap-tianjin", "cpu", 1000, 0);
+  insert into t_ziyan_resource_quota values(0, 1451, 2014, "ap-chongqing", "cpu", 100, 0);
+  insert into t_ziyan_resource_quota values(0, 1451, 2014, "ap-beijing", "memory", 260, 0);
+  insert into t_ziyan_resource_quota values(0, 1451, 2014, "ap-guangzhou", "memory", 2500, 0);
+  insert into t_ziyan_resource_quota values(0, 1451, 2014, "ap-nanjing", "memory", 1840, 0);
+  insert into t_ziyan_resource_quota values(0, 1451, 2014, "ap-shanghai", "memory", 340, 0);
+  insert into t_ziyan_resource_quota values(0, 1451, 2014, "ap-shenzhen", "memory", 2000, 0);
+  insert into t_ziyan_resource_quota values(0, 1451, 2014, "ap-tianjin", "memory", 2000, 0);
+  insert into t_ziyan_resource_quota values(0, 1451, 2014, "ap-chongqing", "memory", 200, 0);
